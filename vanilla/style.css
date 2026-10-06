@@ -1,0 +1,46 @@
+/* ---------- Basic reset ---------- */
+* { box-sizing: border-box; margin: 0; }
+body { font-family: Arial, sans-serif; background: #f5f5f7; color: #222; }
+
+/* ---------- Top bar ---------- */
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 32px; background: #0d1117; color: white;
+  position: sticky; top: 0; z-index: 10;
+}
+.cart-summary { background: #f05032; padding: 8px 16px; border-radius: 20px; font-weight: bold; }
+
+/* ---------- Big banner ---------- */
+.banner { padding: 40px 32px; background: #161b22; color: white; text-align: center; }
+.banner h2 { font-size: 32px; margin-bottom: 8px; }
+.banner p { color: #9ca3af; }
+
+/* ---------- Layout: products on the left, cart on the right ---------- */
+main { display: flex; gap: 24px; padding: 24px 32px; align-items: flex-start; }
+.grid { flex: 1; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; }
+
+/* ---------- Product card ---------- */
+.card {
+  background: white; border-radius: 12px; padding: 20px; text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-4px); }
+.emoji { font-size: 56px; }
+.tag { display: inline-block; margin-top: 8px; font-size: 12px; color: #6b7280; background: #f3f4f6; padding: 2px 10px; border-radius: 10px; }
+.card h3 { margin-top: 8px; }
+.price { margin: 8px 0; color: #444; font-weight: bold; }
+
+/* ---------- Buttons ---------- */
+button { padding: 8px 16px; border: 0; border-radius: 8px; background: #f05032; color: white; cursor: pointer; font-size: 14px; }
+button:hover { background: #d63f25; }
+
+/* ---------- Cart panel ---------- */
+aside { width: 290px; background: white; border-radius: 12px; padding: 20px; position: sticky; top: 90px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); }
+aside ul { list-style: none; padding: 0; margin: 12px 0; }
+aside li { display: flex; justify-content: space-between; align-items: center; margin: 10px 0; font-size: 14px; }
+aside li button { padding: 2px 8px; }
+.empty { color: #9ca3af; }
+.total { border-top: 1px solid #e5e7eb; padding-top: 12px; font-weight: bold; }
+
+/* ---------- Footer ---------- */
+footer { text-align: center; padding: 24px; color: #6b7280; font-size: 14px; }
